@@ -1,0 +1,11 @@
+# this file we need to keep outside scraper folder. Here we configure our database details
+
+HOST: prod-gts-db01.cm06hrvyiezq.us-east-1.rds.amazonaws.com:3306
+#DB_NAME: gts
+DB_NAME: gtsdemo
+DB_USERNAME: gtsadmin
+DB_PASSWORD: y8rHBzqFNBRDv
+
+
+#engine = create_engine('mysql+mysqldb://' + DB_USERNAME + ':' + DB_PASSWORD + '@' + HOST + '/' +DB_NAME)
+#engine = create_engine('mysql+mysqldb://root:vidyayug2022@127.0.0.1:3306/gts_local')

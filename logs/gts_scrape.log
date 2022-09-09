@@ -1,0 +1,555 @@
+2022-09-09 10:44:23,911 - [INFO] [initialize_db.py:33 - create_db_tables()] root: Database connected
+2022-09-09 10:44:23,911 - [INFO] [scrape_asu_university.py:55 - <module>()] root: tables created in the database.
+2022-09-09 10:44:23,911 - [INFO] [scrape_asu_university.py:199 - <module>()] __main__: calling user master_data
+2022-09-09 10:44:23,917 - [INFO] [scrape_asu_university.py:67 - table_exists()] __main__: Table "user" exists: True %s
+2022-09-09 10:44:23,917 - [INFO] [scrape_asu_university.py:78 - master_data_user()] __main__: Inserting into user table
+2022-09-09 10:44:23,942 - [DEBUG] [scrape_asu_university.py:98 - master_data_user()] __main__: Error raised in user table as: (mariadb.IntegrityError) Duplicate entry '42bf81e03d89aefac26c814ef3b0731c' for key 'external_id'
+[SQL: INSERT INTO user (uuid, external_id, id, first_name, middle_name, last_name, email, password, language_id, timezone_id, created_at, created_by, updated_at, updated_by, active) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('a20ffcd2-6ff1-49d5-bce7-7683354c50bb', '42bf81e03d89aefac26c814ef3b0731c', 2264, 'Admin', None, None, 'admin@cintana.com', '$2a$10$E9/AjpcuEkLUEtC3XIRp1uqHsdve3Ngs2hOJY.u4oNWsX6BUMyk72', None, None, datetime.datetime(2022, 9, 9, 10, 44, 23, 936897), None, datetime.datetime(2022, 9, 9, 10, 44, 23, 936906), None, 1)]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+2022-09-09 10:44:23,943 - [INFO] [scrape_asu_university.py:201 - <module>()] __main__: calling app_param_group master_data
+2022-09-09 10:44:23,944 - [INFO] [scrape_asu_university.py:67 - table_exists()] __main__: Table "app_param_group" exists: True %s
+2022-09-09 10:44:23,945 - [INFO] [scrape_asu_university.py:107 - master_data_app_param_group()] __main__: Inserting into app_param_group
+2022-09-09 10:44:23,947 - [INFO] [scrape_asu_university.py:110 - master_data_app_param_group()] __main__: duplicate record in App_param_group table
+2022-09-09 10:44:23,947 - [INFO] [scrape_asu_university.py:203 - <module>()] __main__: calling app_param_value master_data
+2022-09-09 10:44:23,951 - [INFO] [scrape_asu_university.py:67 - table_exists()] __main__: Table "app_param_value" exists: True %s
+2022-09-09 10:44:23,951 - [INFO] [scrape_asu_university.py:136 - master_data_app_param_value()] __main__: Inserting into app_param_value table
+2022-09-09 10:44:23,954 - [INFO] [scrape_asu_university.py:139 - master_data_app_param_value()] __main__: duplicate records in App_param_value table
+2022-09-09 10:44:23,954 - [INFO] [scrape_asu_university.py:205 - <module>()] __main__: calling inst_param_group master_data
+2022-09-09 10:44:23,957 - [INFO] [scrape_asu_university.py:67 - table_exists()] __main__: Table "inst_param_group" exists: True %s
+2022-09-09 10:44:23,957 - [INFO] [scrape_asu_university.py:178 - master_data_inst_param_group()] __main__: Inserting into inst_param_group table
+2022-09-09 10:44:23,957 - [INFO] [scrape_asu_university.py:179 - master_data_inst_param_group()] __main__: inserting data into inst_param_group,
+2022-09-09 10:44:23,961 - [INFO] [scrape_asu_university.py:182 - master_data_inst_param_group()] __main__: duplicate records found in Inst_param_group
+2022-09-09 10:44:25,947 - [INFO] [scrape_asu_university.py:235 - <module>()] __main__: Driver started ----> Headless
+2022-09-09 10:44:26,215 - [INFO] [scrape_asu_university.py:2699 - <module>()] __main__: work site: Arizona State University
+2022-09-09 10:44:26,215 - [DEBUG] [scrape_asu_university.py:2710 - <module>()] __main__: scraping website: https://degrees.apps.asu.edu/masters-phd/major-list/accelerated-programs
+2022-09-09 10:44:35,169 - [DEBUG] [scrape_asu_university.py:2719 - <module>()] __main__: scraping started for : https://degrees.apps.asu.edu/masters-phd/major-list/accelerated-programs
+2022-09-09 10:44:35,169 - [INFO] [scrape_asu_university.py:1949 - scrape_institution_website()] __main__: Stated scraping institution_website() 
+2022-09-09 10:44:42,517 - [INFO] [scrape_asu_university.py:1956 - scrape_institution_website()] __main__: calling parent institution table
+2022-09-09 10:44:42,517 - [INFO] [scrape_asu_university.py:351 - insert_into_university_institution()] __main__: inserting parent data into Institution table
+2022-09-09 10:44:42,520 - [INFO] [scrape_asu_university.py:67 - table_exists()] __main__: Table "institution" exists: True %s
+2022-09-09 10:44:42,522 - [INFO] [scrape_asu_university.py:361 - insert_into_university_institution()] __main__: Duplicate record found
+2022-09-09 10:44:42,523 - [INFO] [scrape_asu_university.py:1958 - scrape_institution_website()] __main__: inserting into Inst_param_value
+2022-09-09 10:44:42,525 - [INFO] [scrape_asu_university.py:67 - table_exists()] __main__: Table "inst_param_value" exists: True %s
+2022-09-09 10:44:42,525 - [INFO] [scrape_asu_university.py:304 - master_data_into_inst_param_values()] __main__: inserting into inst_param_value table
+2022-09-09 10:44:42,525 - [INFO] [scrape_asu_university.py:305 - master_data_into_inst_param_values()] __main__: inserting into inst_param_value
+2022-09-09 10:44:42,531 - [INFO] [scrape_asu_university.py:315 - master_data_into_inst_param_values()] __main__: duplicate records found in Inst_param_value
+2022-09-09 10:44:42,531 - [INFO] [scrape_asu_university.py:1961 - scrape_institution_website()] __main__: all master data insertion completed.
+2022-09-09 10:44:42,538 - [DEBUG] [scrape_asu_university.py:1993 - scrape_institution_website()] __main__: ccurrent program to scrape : Actuarial Science
+2022-09-09 10:44:42,538 - [INFO] [scrape_asu_university.py:2003 - calling_scrape_function()] __main__: calling child institution table
+2022-09-09 10:44:42,538 - [INFO] [scrape_asu_university.py:376 - insert_into_college_institution()] __main__: inserting child data into Inserting table 
+2022-09-09 10:44:42,540 - [INFO] [scrape_asu_university.py:385 - insert_into_college_institution()] __main__: institution id found in college_institution
+2022-09-09 10:44:42,542 - [INFO] [scrape_asu_university.py:393 - insert_into_college_institution()] __main__: Duplicate record found
+2022-09-09 10:44:42,543 - [INFO] [scrape_asu_university.py:2006 - calling_scrape_function()] __main__: Inserting data into area table
+2022-09-09 10:44:42,543 - [INFO] [scrape_asu_university.py:2008 - calling_scrape_function()] __main__: calling area table
+2022-09-09 10:44:42,543 - [INFO] [scrape_asu_university.py:409 - insert_into_area()] __main__: inserting into Area table
+2022-09-09 10:44:42,545 - [INFO] [scrape_asu_university.py:67 - table_exists()] __main__: Table "area" exists: True %s
+2022-09-09 10:44:42,545 - [DEBUG] [scrape_asu_university.py:416 - insert_into_area()] __main__: current area title: Actuarial Science
+2022-09-09 10:44:42,547 - [INFO] [scrape_asu_university.py:422 - insert_into_area()] __main__: Duplicate record found
+2022-09-09 10:44:42,548 - [INFO] [scrape_asu_university.py:2011 - calling_scrape_function()] __main__: calling degree table
+2022-09-09 10:44:42,548 - [INFO] [scrape_asu_university.py:444 - insert_into_degree()] __main__: inserting into Degree table
+2022-09-09 10:44:42,550 - [INFO] [scrape_asu_university.py:67 - table_exists()] __main__: Table "degree" exists: True %s
+2022-09-09 10:44:42,552 - [INFO] [scrape_asu_university.py:456 - insert_into_degree()] __main__: Duplicate record found
+2022-09-09 10:44:42,553 - [INFO] [scrape_asu_university.py:2014 - calling_scrape_function()] __main__: calling degree_level table
+2022-09-09 10:44:42,553 - [INFO] [scrape_asu_university.py:471 - insert_into_degree_level()] __main__: inserting into Degree_level table
+2022-09-09 10:44:42,555 - [INFO] [scrape_asu_university.py:67 - table_exists()] __main__: Table "degree_level" exists: True %s
+2022-09-09 10:44:42,563 - [INFO] [scrape_asu_university.py:492 - insert_into_degree_level()] __main__: duplicate key found in degree_level
+2022-09-09 10:44:42,563 - [INFO] [scrape_asu_university.py:2017 - calling_scrape_function()] __main__: calling location table
+2022-09-09 10:44:42,563 - [INFO] [scrape_asu_university.py:512 - insert_into_location()] __main__: inserting into Location table
+2022-09-09 10:44:42,565 - [INFO] [scrape_asu_university.py:67 - table_exists()] __main__: Table "location" exists: True %s
+2022-09-09 10:44:42,567 - [INFO] [scrape_asu_university.py:525 - insert_into_location()] __main__: Duplicate record found
+2022-09-09 10:44:42,567 - [INFO] [scrape_asu_university.py:2028 - scrape_course_summary()] __main__: scraping course_summary()
+2022-09-09 10:44:48,096 - [INFO] [scrape_asu_university.py:1052 - insert_into_inst_location()] __main__: Inserting into institution-location table
+2022-09-09 10:44:48,099 - [INFO] [scrape_asu_university.py:67 - table_exists()] __main__: Table "institution_location" exists: True %s
+2022-09-09 10:44:48,104 - [DEBUG] [scrape_asu_university.py:1068 - insert_into_inst_location()] __main__: duplicate data found in institution-location(): (mariadb.IntegrityError) Duplicate entry '1-4' for key 'PRIMARY'
+[SQL: INSERT INTO institution_location (inst_id, location_id) VALUES (?, ?)]
+[parameters: (1, 4)]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+2022-09-09 10:44:48,129 - [INFO] [scrape_asu_university.py:548 - insert_into_program()] __main__: inserting into program table
+2022-09-09 10:44:48,132 - [INFO] [scrape_asu_university.py:67 - table_exists()] __main__: Table "program" exists: True %s
+2022-09-09 10:44:48,138 - [INFO] [scrape_asu_university.py:620 - insert_into_program()] __main__: Duplicate record found
+2022-09-09 10:44:48,138 - [INFO] [scrape_asu_university.py:1079 - insert_into_program_area()] __main__: inserting into program_area table
+2022-09-09 10:44:48,139 - [INFO] [scrape_asu_university.py:67 - table_exists()] __main__: Table "program_area" exists: True %s
+2022-09-09 10:44:48,148 - [DEBUG] [scrape_asu_university.py:1101 - insert_into_program_area()] __main__: Duplicate data found in program_area  (mariadb.IntegrityError) Duplicate entry '2-2' for key 'PRIMARY'
+[SQL: INSERT INTO program_area (program_id, area_id) VALUES (?, ?)]
+[parameters: (2, 2)]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+2022-09-09 10:44:48,148 - [INFO] [scrape_asu_university.py:641 - insert_into_program_college()] __main__: Inserting into program-college table
+2022-09-09 10:44:48,150 - [INFO] [scrape_asu_university.py:67 - table_exists()] __main__: Table "program_college" exists: True %s
+2022-09-09 10:44:48,154 - [DEBUG] [scrape_asu_university.py:664 - insert_into_program_college()] __main__: duplicate data found in program-college(): (mariadb.IntegrityError) Duplicate entry '2-7' for key 'PRIMARY'
+[SQL: INSERT INTO program_college (program_id, college_id) VALUES (?, ?)]
+[parameters: (2, 7)]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+2022-09-09 10:44:48,154 - [INFO] [scrape_asu_university.py:1108 - insert_into_program_location()] __main__: inserting into program_location
+2022-09-09 10:44:48,156 - [INFO] [scrape_asu_university.py:67 - table_exists()] __main__: Table "program_location" exists: True %s
+2022-09-09 10:44:48,159 - [DEBUG] [scrape_asu_university.py:1126 - insert_into_program_location()] __main__: duplicate data found in program_location: (mariadb.IntegrityError) Duplicate entry '2-4' for key 'PRIMARY'
+[SQL: INSERT INTO program_location (program_id, location_id) VALUES (?, ?)]
+[parameters: (2, 4)]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+2022-09-09 10:44:48,159 - [INFO] [scrape_asu_university.py:676 - send_graduate_to_req_table()] __main__: inserting graduate degree each requirements..!
+2022-09-09 10:44:48,170 - [INFO] [scrape_asu_university.py:698 - send_graduate_to_req_table()] __main__: Duplicate record found
+2022-09-09 10:44:48,170 - [INFO] [scrape_asu_university.py:1201 - insert_into_term()] __main__: inserting into term table
+2022-09-09 10:44:48,172 - [INFO] [scrape_asu_university.py:67 - table_exists()] __main__: Table "term" exists: True %s
+2022-09-09 10:44:48,175 - [DEBUG] [scrape_asu_university.py:1213 - insert_into_term()] __main__: Error: No id found: No row was found when one was required
+2022-09-09 10:44:48,175 - [DEBUG] [scrape_asu_university.py:1269 - insert_into_term()] __main__: Error in insert_into_term(), name 'requirement_group_id' is not defined
+2022-09-09 10:44:48,175 - [DEBUG] [scrape_asu_university.py:717 - send_graduate_to_req_table()] __main__: error raised while inserting-into-term as:  name 'requirement_group_id' is not defined
+2022-09-09 10:44:48,177 - [INFO] [scrape_asu_university.py:1276 - insert_into_rqmt_group_college()] __main__: inserting into Rqmt_group_college()
+2022-09-09 10:44:48,179 - [INFO] [scrape_asu_university.py:67 - table_exists()] __main__: Table "rqmt_group_college" exists: True %s
+2022-09-09 10:44:48,183 - [DEBUG] [scrape_asu_university.py:1291 - insert_into_rqmt_group_college()] __main__: Error for Rqmt_group_college(): (mariadb.IntegrityError) Duplicate entry '6001-7' for key 'PRIMARY'
+[SQL: INSERT INTO rqmt_group_college (rqmt_group_id, college_id) VALUES (?, ?)]
+[parameters: (6001, 7)]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+2022-09-09 10:44:48,183 - [INFO] [scrape_asu_university.py:1296 - insert_into_rqmt_group_location()] __main__: inserting into Rqmt_group_location() table
+2022-09-09 10:44:48,186 - [INFO] [scrape_asu_university.py:67 - table_exists()] __main__: Table "rqmt_group_location" exists: True %s
+2022-09-09 10:44:48,192 - [DEBUG] [scrape_asu_university.py:1318 - insert_into_rqmt_group_location()] __main__: Error for Rqmt_group_location(): (mariadb.IntegrityError) Duplicate entry '6001-4' for key 'PRIMARY'
+[SQL: INSERT INTO rqmt_group_location (rqmt_group_id, location_id) VALUES (?, ?)]
+[parameters: (6001, 4)]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+2022-09-09 10:44:48,194 - [INFO] [scrape_asu_university.py:747 - send_graduate_to_req_table()] __main__: Duplicate record found
+2022-09-09 10:44:48,200 - [DEBUG] [scrape_asu_university.py:787 - send_graduate_to_req_table()] __main__: Error raised as Requirement_group_Requirement_category-table as: (mariadb.IntegrityError) Duplicate entry '6001-1' for key 'rqmt_group_rqmt_category_rqmt_group_id_rqmt_category_id'
+[SQL: INSERT INTO rqmt_group_rqmt_category (id, rqmt_group_id, rqmt_category_id, credit_type, min_credits, max_credits) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: (2021, 6001, 1, 'Hours', None, 6.0)]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+2022-09-09 10:44:48,201 - [INFO] [scrape_asu_university.py:747 - send_graduate_to_req_table()] __main__: Duplicate record found
+2022-09-09 10:44:48,205 - [DEBUG] [scrape_asu_university.py:787 - send_graduate_to_req_table()] __main__: Error raised as Requirement_group_Requirement_category-table as: (mariadb.IntegrityError) Duplicate entry '6001-7' for key 'rqmt_group_rqmt_category_rqmt_group_id_rqmt_category_id'
+[SQL: INSERT INTO rqmt_group_rqmt_category (id, rqmt_group_id, rqmt_category_id, credit_type, min_credits, max_credits) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: (2022, 6001, 7, 'Hours', None, 21.0)]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+2022-09-09 10:44:48,207 - [INFO] [scrape_asu_university.py:747 - send_graduate_to_req_table()] __main__: Duplicate record found
+2022-09-09 10:44:48,214 - [DEBUG] [scrape_asu_university.py:787 - send_graduate_to_req_table()] __main__: Error raised as Requirement_group_Requirement_category-table as: (mariadb.IntegrityError) Duplicate entry '6001-5' for key 'rqmt_group_rqmt_category_rqmt_group_id_rqmt_category_id'
+[SQL: INSERT INTO rqmt_group_rqmt_category (id, rqmt_group_id, rqmt_category_id, credit_type, min_credits, max_credits) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: (2023, 6001, 5, 'Hours', None, 3.0)]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+2022-09-09 10:44:48,215 - [INFO] [scrape_asu_university.py:747 - send_graduate_to_req_table()] __main__: Duplicate record found
+2022-09-09 10:44:48,219 - [DEBUG] [scrape_asu_university.py:787 - send_graduate_to_req_table()] __main__: Error raised as Requirement_group_Requirement_category-table as: (mariadb.IntegrityError) Duplicate entry '6001-6' for key 'rqmt_group_rqmt_category_rqmt_group_id_rqmt_category_id'
+[SQL: INSERT INTO rqmt_group_rqmt_category (id, rqmt_group_id, rqmt_category_id, credit_type, min_credits, max_credits) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: (2024, 6001, 6, None, None, None)]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+2022-09-09 10:44:48,221 - [INFO] [scrape_asu_university.py:987 - send_graduate_to_req_table()] __main__: Duplicate record found
+2022-09-09 10:44:48,227 - [INFO] [scrape_asu_university.py:830 - send_graduate_to_req_table()] __main__: Duplicate record found
+2022-09-09 10:44:48,229 - [DEBUG] [scrape_asu_university.py:862 - send_graduate_to_req_table()] __main__: error raised as while insert into- graduate-req-term table: name 'requirement_group_id' is not defined
+2022-09-09 10:45:16,125 - [DEBUG] [scrape_asu_university.py:2439 - scrape_course_curriculum_page()] __main__: current requirement: ACT 560 Advanced Data Analytics in Insurance I (3)
+2022-09-09 10:45:16,125 - [DEBUG] [scrape_asu_university.py:2440 - scrape_course_curriculum_page()] __main__: scraping url: https://webapp4.asu.edu/catalog/courselist?s=ACT&n=560&t=2227&hon=F&gg=F
+2022-09-09 10:45:16,125 - [DEBUG] [scrape_asu_university.py:2490 - scrape_course_curriculum_page()] __main__: no general studies found for ACT 560 Advanced Data Analytics in Insurance I (3)
+2022-09-09 10:45:16,125 - [INFO] [scrape_asu_university.py:2491 - scrape_course_curriculum_page()] __main__: calling insert_into_course() 
+2022-09-09 10:45:16,125 - [DEBUG] [scrape_asu_university.py:2493 - scrape_course_curriculum_page()] __main__: course code: ACT 560 
+2022-09-09 10:45:16,128 - [INFO] [scrape_asu_university.py:2496 - scrape_course_curriculum_page()] __main__: duplicate record found in course table
+2022-09-09 10:45:16,131 - [INFO] [scrape_asu_university.py:1924 - post_data_into_rqmt_variable()] __main__: inserting data-into post_data_into_rqmt_variable()
+2022-09-09 10:45:16,133 - [INFO] [scrape_asu_university.py:1929 - post_data_into_rqmt_variable()] __main__: Duplicate record found
+2022-09-09 10:45:16,136 - [INFO] [scrape_asu_university.py:830 - send_graduate_to_req_table()] __main__: Duplicate record found
+2022-09-09 10:45:16,140 - [DEBUG] [scrape_asu_university.py:862 - send_graduate_to_req_table()] __main__: error raised as while insert into- graduate-req-term table: name 'requirement_group_id' is not defined
+2022-09-09 10:45:43,181 - [DEBUG] [scrape_asu_university.py:2439 - scrape_course_curriculum_page()] __main__: current requirement: ACT 561 Advanced Data analytics in Insurance II (3)
+2022-09-09 10:45:43,181 - [DEBUG] [scrape_asu_university.py:2440 - scrape_course_curriculum_page()] __main__: scraping url: https://webapp4.asu.edu/catalog/courselist?s=ACT&n=561&t=2227&hon=F&gg=F
+2022-09-09 10:45:43,182 - [DEBUG] [scrape_asu_university.py:2490 - scrape_course_curriculum_page()] __main__: no general studies found for ACT 561 Advanced Data analytics in Insurance II (3)
+2022-09-09 10:45:43,182 - [INFO] [scrape_asu_university.py:2491 - scrape_course_curriculum_page()] __main__: calling insert_into_course() 
+2022-09-09 10:45:43,182 - [DEBUG] [scrape_asu_university.py:2493 - scrape_course_curriculum_page()] __main__: course code: ACT 561 
+2022-09-09 10:45:43,184 - [INFO] [scrape_asu_university.py:2496 - scrape_course_curriculum_page()] __main__: duplicate record found in course table
+2022-09-09 10:45:43,186 - [INFO] [scrape_asu_university.py:1924 - post_data_into_rqmt_variable()] __main__: inserting data-into post_data_into_rqmt_variable()
+2022-09-09 10:45:43,187 - [INFO] [scrape_asu_university.py:1929 - post_data_into_rqmt_variable()] __main__: Duplicate record found
+2022-09-09 10:45:43,191 - [INFO] [scrape_asu_university.py:928 - send_graduate_to_req_table()] __main__: Duplicate record found
+2022-09-09 10:45:43,197 - [DEBUG] [scrape_asu_university.py:958 - send_graduate_to_req_table()] __main__: error raised at line-921 for grad-req-term table : (mariadb.IntegrityError) Duplicate entry '16-1' for key 'PRIMARY'
+[SQL: INSERT INTO rqmt_term (requirement_id, term_id) VALUES (?, ?)]
+[parameters: (16, 1)]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+2022-09-09 10:45:43,199 - [INFO] [scrape_asu_university.py:1924 - post_data_into_rqmt_variable()] __main__: inserting data-into post_data_into_rqmt_variable()
+2022-09-09 10:45:43,200 - [INFO] [scrape_asu_university.py:1929 - post_data_into_rqmt_variable()] __main__: Duplicate record found
+2022-09-09 10:45:43,204 - [INFO] [scrape_asu_university.py:830 - send_graduate_to_req_table()] __main__: Duplicate record found
+2022-09-09 10:45:43,206 - [DEBUG] [scrape_asu_university.py:862 - send_graduate_to_req_table()] __main__: error raised as while insert into- graduate-req-term table: name 'requirement_group_id' is not defined
+2022-09-09 10:46:09,996 - [DEBUG] [scrape_asu_university.py:2439 - scrape_course_curriculum_page()] __main__: current requirement: ACT 593 Applied Project (3)
+2022-09-09 10:46:09,996 - [DEBUG] [scrape_asu_university.py:2440 - scrape_course_curriculum_page()] __main__: scraping url: https://webapp4.asu.edu/catalog/courselist?s=ACT&n=593&t=2227&hon=F&gg=F
+2022-09-09 10:46:09,996 - [DEBUG] [scrape_asu_university.py:2490 - scrape_course_curriculum_page()] __main__: no general studies found for ACT 593 Applied Project (3)
+2022-09-09 10:46:09,996 - [INFO] [scrape_asu_university.py:2491 - scrape_course_curriculum_page()] __main__: calling insert_into_course() 
+2022-09-09 10:46:09,996 - [DEBUG] [scrape_asu_university.py:2493 - scrape_course_curriculum_page()] __main__: course code: ACT 593 
+2022-09-09 10:46:09,998 - [INFO] [scrape_asu_university.py:2496 - scrape_course_curriculum_page()] __main__: duplicate record found in course table
+2022-09-09 10:46:10,004 - [INFO] [scrape_asu_university.py:1924 - post_data_into_rqmt_variable()] __main__: inserting data-into post_data_into_rqmt_variable()
+2022-09-09 10:46:10,006 - [INFO] [scrape_asu_university.py:1929 - post_data_into_rqmt_variable()] __main__: Duplicate record found
+2022-09-09 10:46:10,012 - [INFO] [scrape_asu_university.py:830 - send_graduate_to_req_table()] __main__: Duplicate record found
+2022-09-09 10:46:10,016 - [DEBUG] [scrape_asu_university.py:862 - send_graduate_to_req_table()] __main__: error raised as while insert into- graduate-req-term table: name 'requirement_group_id' is not defined
+2022-09-09 10:46:10,017 - [INFO] [scrape_asu_university.py:987 - send_graduate_to_req_table()] __main__: Duplicate record found
+2022-09-09 10:46:10,020 - [INFO] [scrape_asu_university.py:67 - table_exists()] __main__: Table "admission_req" exists: True %s
+2022-09-09 10:46:10,031 - [INFO] [scrape_asu_university.py:1030 - get_graduate_admission_req()] __main__: Duplicate record found
+2022-09-09 10:46:10,031 - [INFO] [scrape_asu_university.py:2053 - scrape_get_major_map_link()] __main__: collect & scrape major_map_link
+2022-09-09 10:46:10,036 - [DEBUG] [scrape_asu_university.py:1993 - scrape_institution_website()] __main__: ccurrent program to scrape : Aerospace Engineering
+2022-09-09 10:46:10,036 - [INFO] [scrape_asu_university.py:2003 - calling_scrape_function()] __main__: calling child institution table
+2022-09-09 10:46:10,036 - [INFO] [scrape_asu_university.py:376 - insert_into_college_institution()] __main__: inserting child data into Inserting table 
+2022-09-09 10:46:10,037 - [INFO] [scrape_asu_university.py:385 - insert_into_college_institution()] __main__: institution id found in college_institution
+2022-09-09 10:46:10,039 - [INFO] [scrape_asu_university.py:393 - insert_into_college_institution()] __main__: Duplicate record found
+2022-09-09 10:46:10,040 - [INFO] [scrape_asu_university.py:2006 - calling_scrape_function()] __main__: Inserting data into area table
+2022-09-09 10:46:10,040 - [INFO] [scrape_asu_university.py:2008 - calling_scrape_function()] __main__: calling area table
+2022-09-09 10:46:10,040 - [INFO] [scrape_asu_university.py:409 - insert_into_area()] __main__: inserting into Area table
+2022-09-09 10:46:10,042 - [INFO] [scrape_asu_university.py:67 - table_exists()] __main__: Table "area" exists: True %s
+2022-09-09 10:46:10,042 - [DEBUG] [scrape_asu_university.py:416 - insert_into_area()] __main__: current area title: Aerospace Engineering
+2022-09-09 10:46:10,043 - [INFO] [scrape_asu_university.py:422 - insert_into_area()] __main__: Duplicate record found
+2022-09-09 10:46:10,044 - [INFO] [scrape_asu_university.py:2011 - calling_scrape_function()] __main__: calling degree table
+2022-09-09 10:46:10,044 - [INFO] [scrape_asu_university.py:444 - insert_into_degree()] __main__: inserting into Degree table
+2022-09-09 10:46:10,046 - [INFO] [scrape_asu_university.py:67 - table_exists()] __main__: Table "degree" exists: True %s
+2022-09-09 10:46:10,047 - [INFO] [scrape_asu_university.py:456 - insert_into_degree()] __main__: Duplicate record found
+2022-09-09 10:46:10,048 - [INFO] [scrape_asu_university.py:2014 - calling_scrape_function()] __main__: calling degree_level table
+2022-09-09 10:46:10,048 - [INFO] [scrape_asu_university.py:471 - insert_into_degree_level()] __main__: inserting into Degree_level table
+2022-09-09 10:46:10,050 - [INFO] [scrape_asu_university.py:67 - table_exists()] __main__: Table "degree_level" exists: True %s
+2022-09-09 10:46:10,053 - [INFO] [scrape_asu_university.py:492 - insert_into_degree_level()] __main__: duplicate key found in degree_level
+2022-09-09 10:46:10,054 - [INFO] [scrape_asu_university.py:2017 - calling_scrape_function()] __main__: calling location table
+2022-09-09 10:46:10,054 - [INFO] [scrape_asu_university.py:512 - insert_into_location()] __main__: inserting into Location table
+2022-09-09 10:46:10,056 - [INFO] [scrape_asu_university.py:67 - table_exists()] __main__: Table "location" exists: True %s
+2022-09-09 10:46:10,057 - [INFO] [scrape_asu_university.py:525 - insert_into_location()] __main__: Duplicate record found
+2022-09-09 10:46:10,057 - [INFO] [scrape_asu_university.py:2028 - scrape_course_summary()] __main__: scraping course_summary()
+2022-09-09 10:46:16,034 - [INFO] [scrape_asu_university.py:1052 - insert_into_inst_location()] __main__: Inserting into institution-location table
+2022-09-09 10:46:16,037 - [INFO] [scrape_asu_university.py:67 - table_exists()] __main__: Table "institution_location" exists: True %s
+2022-09-09 10:46:16,040 - [DEBUG] [scrape_asu_university.py:1068 - insert_into_inst_location()] __main__: duplicate data found in institution-location(): (mariadb.IntegrityError) Duplicate entry '1-4' for key 'PRIMARY'
+[SQL: INSERT INTO institution_location (inst_id, location_id) VALUES (?, ?)]
+[parameters: (1, 4)]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+2022-09-09 10:46:16,062 - [INFO] [scrape_asu_university.py:548 - insert_into_program()] __main__: inserting into program table
+2022-09-09 10:46:16,065 - [INFO] [scrape_asu_university.py:67 - table_exists()] __main__: Table "program" exists: True %s
+2022-09-09 10:46:16,070 - [INFO] [scrape_asu_university.py:620 - insert_into_program()] __main__: Duplicate record found
+2022-09-09 10:46:16,070 - [INFO] [scrape_asu_university.py:1079 - insert_into_program_area()] __main__: inserting into program_area table
+2022-09-09 10:46:16,072 - [INFO] [scrape_asu_university.py:67 - table_exists()] __main__: Table "program_area" exists: True %s
+2022-09-09 10:46:16,076 - [DEBUG] [scrape_asu_university.py:1101 - insert_into_program_area()] __main__: Duplicate data found in program_area  (mariadb.IntegrityError) Duplicate entry '3-3' for key 'PRIMARY'
+[SQL: INSERT INTO program_area (program_id, area_id) VALUES (?, ?)]
+[parameters: (3, 3)]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+2022-09-09 10:46:16,076 - [INFO] [scrape_asu_university.py:641 - insert_into_program_college()] __main__: Inserting into program-college table
+2022-09-09 10:46:16,078 - [INFO] [scrape_asu_university.py:67 - table_exists()] __main__: Table "program_college" exists: True %s
+2022-09-09 10:46:16,081 - [DEBUG] [scrape_asu_university.py:664 - insert_into_program_college()] __main__: duplicate data found in program-college(): (mariadb.IntegrityError) Duplicate entry '3-8' for key 'PRIMARY'
+[SQL: INSERT INTO program_college (program_id, college_id) VALUES (?, ?)]
+[parameters: (3, 8)]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+2022-09-09 10:46:16,081 - [INFO] [scrape_asu_university.py:1108 - insert_into_program_location()] __main__: inserting into program_location
+2022-09-09 10:46:16,083 - [INFO] [scrape_asu_university.py:67 - table_exists()] __main__: Table "program_location" exists: True %s
+2022-09-09 10:46:16,087 - [DEBUG] [scrape_asu_university.py:1126 - insert_into_program_location()] __main__: duplicate data found in program_location: (mariadb.IntegrityError) Duplicate entry '3-4' for key 'PRIMARY'
+[SQL: INSERT INTO program_location (program_id, location_id) VALUES (?, ?)]
+[parameters: (3, 4)]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+2022-09-09 10:46:16,087 - [INFO] [scrape_asu_university.py:676 - send_graduate_to_req_table()] __main__: inserting graduate degree each requirements..!
+2022-09-09 10:46:16,096 - [INFO] [scrape_asu_university.py:698 - send_graduate_to_req_table()] __main__: Duplicate record found
+2022-09-09 10:46:16,097 - [INFO] [scrape_asu_university.py:1201 - insert_into_term()] __main__: inserting into term table
+2022-09-09 10:46:16,099 - [INFO] [scrape_asu_university.py:67 - table_exists()] __main__: Table "term" exists: True %s
+2022-09-09 10:46:16,101 - [DEBUG] [scrape_asu_university.py:1213 - insert_into_term()] __main__: Error: No id found: No row was found when one was required
+2022-09-09 10:46:16,101 - [DEBUG] [scrape_asu_university.py:1269 - insert_into_term()] __main__: Error in insert_into_term(), name 'requirement_group_id' is not defined
+2022-09-09 10:46:16,101 - [DEBUG] [scrape_asu_university.py:717 - send_graduate_to_req_table()] __main__: error raised while inserting-into-term as:  name 'requirement_group_id' is not defined
+2022-09-09 10:46:16,102 - [INFO] [scrape_asu_university.py:1276 - insert_into_rqmt_group_college()] __main__: inserting into Rqmt_group_college()
+2022-09-09 10:46:16,104 - [INFO] [scrape_asu_university.py:67 - table_exists()] __main__: Table "rqmt_group_college" exists: True %s
+2022-09-09 10:46:16,107 - [DEBUG] [scrape_asu_university.py:1291 - insert_into_rqmt_group_college()] __main__: Error for Rqmt_group_college(): (mariadb.IntegrityError) Duplicate entry '6002-8' for key 'PRIMARY'
+[SQL: INSERT INTO rqmt_group_college (rqmt_group_id, college_id) VALUES (?, ?)]
+[parameters: (6002, 8)]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+2022-09-09 10:46:16,107 - [INFO] [scrape_asu_university.py:1296 - insert_into_rqmt_group_location()] __main__: inserting into Rqmt_group_location() table
+2022-09-09 10:46:16,109 - [INFO] [scrape_asu_university.py:67 - table_exists()] __main__: Table "rqmt_group_location" exists: True %s
+2022-09-09 10:46:16,114 - [DEBUG] [scrape_asu_university.py:1318 - insert_into_rqmt_group_location()] __main__: Error for Rqmt_group_location(): (mariadb.IntegrityError) Duplicate entry '6002-4' for key 'PRIMARY'
+[SQL: INSERT INTO rqmt_group_location (rqmt_group_id, location_id) VALUES (?, ?)]
+[parameters: (6002, 4)]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+2022-09-09 10:46:16,115 - [INFO] [scrape_asu_university.py:747 - send_graduate_to_req_table()] __main__: Duplicate record found
+2022-09-09 10:46:16,119 - [DEBUG] [scrape_asu_university.py:787 - send_graduate_to_req_table()] __main__: Error raised as Requirement_group_Requirement_category-table as: (mariadb.IntegrityError) Duplicate entry '6002-8' for key 'rqmt_group_rqmt_category_rqmt_group_id_rqmt_category_id'
+[SQL: INSERT INTO rqmt_group_rqmt_category (id, rqmt_group_id, rqmt_category_id, credit_type, min_credits, max_credits) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: (2025, 6002, 8, 'Hours', 12.0, 15.0)]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+2022-09-09 10:46:16,121 - [INFO] [scrape_asu_university.py:747 - send_graduate_to_req_table()] __main__: Duplicate record found
+2022-09-09 10:46:16,125 - [DEBUG] [scrape_asu_university.py:787 - send_graduate_to_req_table()] __main__: Error raised as Requirement_group_Requirement_category-table as: (mariadb.IntegrityError) Duplicate entry '6002-9' for key 'rqmt_group_rqmt_category_rqmt_group_id_rqmt_category_id'
+[SQL: INSERT INTO rqmt_group_rqmt_category (id, rqmt_group_id, rqmt_category_id, credit_type, min_credits, max_credits) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: (2026, 6002, 9, 'Hours', 6.0, 9.0)]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+2022-09-09 10:46:16,127 - [INFO] [scrape_asu_university.py:747 - send_graduate_to_req_table()] __main__: Duplicate record found
+2022-09-09 10:46:16,132 - [DEBUG] [scrape_asu_university.py:787 - send_graduate_to_req_table()] __main__: Error raised as Requirement_group_Requirement_category-table as: (mariadb.IntegrityError) Duplicate entry '6002-10' for key 'rqmt_group_rqmt_category_rqmt_group_id_rqmt_category_id'
+[SQL: INSERT INTO rqmt_group_rqmt_category (id, rqmt_group_id, rqmt_category_id, credit_type, min_credits, max_credits) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: (2027, 6002, 10, 'Hours', None, 6.0)]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+2022-09-09 10:46:16,133 - [INFO] [scrape_asu_university.py:747 - send_graduate_to_req_table()] __main__: Duplicate record found
+2022-09-09 10:46:16,140 - [DEBUG] [scrape_asu_university.py:787 - send_graduate_to_req_table()] __main__: Error raised as Requirement_group_Requirement_category-table as: (mariadb.IntegrityError) Duplicate entry '6002-5' for key 'rqmt_group_rqmt_category_rqmt_group_id_rqmt_category_id'
+[SQL: INSERT INTO rqmt_group_rqmt_category (id, rqmt_group_id, rqmt_category_id, credit_type, min_credits, max_credits) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: (2028, 6002, 5, 'Hours', 0.0, 6.0)]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+2022-09-09 10:46:16,141 - [INFO] [scrape_asu_university.py:747 - send_graduate_to_req_table()] __main__: Duplicate record found
+2022-09-09 10:46:16,147 - [DEBUG] [scrape_asu_university.py:787 - send_graduate_to_req_table()] __main__: Error raised as Requirement_group_Requirement_category-table as: (mariadb.IntegrityError) Duplicate entry '6002-6' for key 'rqmt_group_rqmt_category_rqmt_group_id_rqmt_category_id'
+[SQL: INSERT INTO rqmt_group_rqmt_category (id, rqmt_group_id, rqmt_category_id, credit_type, min_credits, max_credits) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: (2029, 6002, 6, None, None, None)]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+2022-09-09 10:46:16,148 - [INFO] [scrape_asu_university.py:987 - send_graduate_to_req_table()] __main__: Duplicate record found
+2022-09-09 10:46:16,152 - [INFO] [scrape_asu_university.py:928 - send_graduate_to_req_table()] __main__: Duplicate record found
+2022-09-09 10:46:16,156 - [DEBUG] [scrape_asu_university.py:958 - send_graduate_to_req_table()] __main__: error raised at line-921 for grad-req-term table : (mariadb.IntegrityError) Duplicate entry '21-1' for key 'PRIMARY'
+[SQL: INSERT INTO rqmt_term (requirement_id, term_id) VALUES (?, ?)]
+[parameters: (21, 1)]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+2022-09-09 10:46:16,157 - [INFO] [scrape_asu_university.py:1924 - post_data_into_rqmt_variable()] __main__: inserting data-into post_data_into_rqmt_variable()
+2022-09-09 10:46:16,159 - [INFO] [scrape_asu_university.py:1929 - post_data_into_rqmt_variable()] __main__: Duplicate record found
+2022-09-09 10:46:16,163 - [INFO] [scrape_asu_university.py:928 - send_graduate_to_req_table()] __main__: Duplicate record found
+2022-09-09 10:46:16,167 - [DEBUG] [scrape_asu_university.py:958 - send_graduate_to_req_table()] __main__: error raised at line-921 for grad-req-term table : (mariadb.IntegrityError) Duplicate entry '22-1' for key 'PRIMARY'
+[SQL: INSERT INTO rqmt_term (requirement_id, term_id) VALUES (?, ?)]
+[parameters: (22, 1)]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+2022-09-09 10:46:16,168 - [INFO] [scrape_asu_university.py:1924 - post_data_into_rqmt_variable()] __main__: inserting data-into post_data_into_rqmt_variable()
+2022-09-09 10:46:16,170 - [INFO] [scrape_asu_university.py:1929 - post_data_into_rqmt_variable()] __main__: Duplicate record found
+2022-09-09 10:46:16,173 - [INFO] [scrape_asu_university.py:928 - send_graduate_to_req_table()] __main__: Duplicate record found
+2022-09-09 10:46:16,182 - [DEBUG] [scrape_asu_university.py:958 - send_graduate_to_req_table()] __main__: error raised at line-921 for grad-req-term table : (mariadb.IntegrityError) Duplicate entry '23-1' for key 'PRIMARY'
+[SQL: INSERT INTO rqmt_term (requirement_id, term_id) VALUES (?, ?)]
+[parameters: (23, 1)]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+2022-09-09 10:46:16,183 - [INFO] [scrape_asu_university.py:1924 - post_data_into_rqmt_variable()] __main__: inserting data-into post_data_into_rqmt_variable()
+2022-09-09 10:46:16,184 - [INFO] [scrape_asu_university.py:1929 - post_data_into_rqmt_variable()] __main__: Duplicate record found
+2022-09-09 10:46:16,188 - [INFO] [scrape_asu_university.py:830 - send_graduate_to_req_table()] __main__: Duplicate record found
+2022-09-09 10:46:16,191 - [DEBUG] [scrape_asu_university.py:862 - send_graduate_to_req_table()] __main__: error raised as while insert into- graduate-req-term table: name 'requirement_group_id' is not defined
+2022-09-09 10:46:43,806 - [DEBUG] [scrape_asu_university.py:2439 - scrape_course_curriculum_page()] __main__: current requirement: MAE 593 Applied Project (3) or
+2022-09-09 10:46:43,806 - [DEBUG] [scrape_asu_university.py:2440 - scrape_course_curriculum_page()] __main__: scraping url: https://webapp4.asu.edu/catalog/courselist?s=MAE&n=593&t=2227&hon=F&gg=F
+2022-09-09 10:46:43,806 - [DEBUG] [scrape_asu_university.py:2490 - scrape_course_curriculum_page()] __main__: no general studies found for MAE 593 Applied Project (3) or
+2022-09-09 10:46:43,807 - [INFO] [scrape_asu_university.py:2491 - scrape_course_curriculum_page()] __main__: calling insert_into_course() 
+2022-09-09 10:46:43,807 - [DEBUG] [scrape_asu_university.py:2493 - scrape_course_curriculum_page()] __main__: course code: MAE 593 
+2022-09-09 10:46:43,808 - [INFO] [scrape_asu_university.py:2496 - scrape_course_curriculum_page()] __main__: duplicate record found in course table
+2022-09-09 10:46:43,811 - [INFO] [scrape_asu_university.py:1924 - post_data_into_rqmt_variable()] __main__: inserting data-into post_data_into_rqmt_variable()
+2022-09-09 10:46:43,812 - [INFO] [scrape_asu_university.py:1929 - post_data_into_rqmt_variable()] __main__: Duplicate record found
+2022-09-09 10:46:43,816 - [INFO] [scrape_asu_university.py:830 - send_graduate_to_req_table()] __main__: Duplicate record found
+2022-09-09 10:46:43,818 - [DEBUG] [scrape_asu_university.py:862 - send_graduate_to_req_table()] __main__: error raised as while insert into- graduate-req-term table: name 'requirement_group_id' is not defined
+2022-09-09 10:47:10,638 - [DEBUG] [scrape_asu_university.py:2439 - scrape_course_curriculum_page()] __main__: current requirement: MAE 599 Thesis (6) or
+2022-09-09 10:47:10,638 - [DEBUG] [scrape_asu_university.py:2440 - scrape_course_curriculum_page()] __main__: scraping url: https://webapp4.asu.edu/catalog/courselist?s=MAE&n=599&t=2227&hon=F&gg=F
+2022-09-09 10:47:10,638 - [DEBUG] [scrape_asu_university.py:2490 - scrape_course_curriculum_page()] __main__: no general studies found for MAE 599 Thesis (6) or
+2022-09-09 10:47:10,638 - [INFO] [scrape_asu_university.py:2491 - scrape_course_curriculum_page()] __main__: calling insert_into_course() 
+2022-09-09 10:47:10,638 - [DEBUG] [scrape_asu_university.py:2493 - scrape_course_curriculum_page()] __main__: course code: MAE 599 
+2022-09-09 10:47:10,640 - [INFO] [scrape_asu_university.py:2496 - scrape_course_curriculum_page()] __main__: duplicate record found in course table
+2022-09-09 10:47:10,643 - [INFO] [scrape_asu_university.py:1924 - post_data_into_rqmt_variable()] __main__: inserting data-into post_data_into_rqmt_variable()
+2022-09-09 10:47:10,644 - [INFO] [scrape_asu_university.py:1929 - post_data_into_rqmt_variable()] __main__: Duplicate record found
+2022-09-09 10:47:10,647 - [INFO] [scrape_asu_university.py:830 - send_graduate_to_req_table()] __main__: Duplicate record found
+2022-09-09 10:47:10,649 - [DEBUG] [scrape_asu_university.py:862 - send_graduate_to_req_table()] __main__: error raised as while insert into- graduate-req-term table: name 'requirement_group_id' is not defined
+2022-09-09 10:47:10,653 - [INFO] [scrape_asu_university.py:830 - send_graduate_to_req_table()] __main__: Duplicate record found
+2022-09-09 10:47:10,655 - [DEBUG] [scrape_asu_university.py:862 - send_graduate_to_req_table()] __main__: error raised as while insert into- graduate-req-term table: name 'requirement_group_id' is not defined
+2022-09-09 10:47:10,656 - [INFO] [scrape_asu_university.py:987 - send_graduate_to_req_table()] __main__: Duplicate record found
+2022-09-09 10:47:10,658 - [INFO] [scrape_asu_university.py:987 - send_graduate_to_req_table()] __main__: Duplicate record found
+2022-09-09 10:47:10,659 - [INFO] [scrape_asu_university.py:987 - send_graduate_to_req_table()] __main__: Duplicate record found
+2022-09-09 10:47:10,661 - [INFO] [scrape_asu_university.py:67 - table_exists()] __main__: Table "admission_req" exists: True %s
+2022-09-09 10:47:10,671 - [INFO] [scrape_asu_university.py:1030 - get_graduate_admission_req()] __main__: Duplicate record found
+2022-09-09 10:47:10,671 - [INFO] [scrape_asu_university.py:2053 - scrape_get_major_map_link()] __main__: collect & scrape major_map_link
+2022-09-09 10:47:10,675 - [DEBUG] [scrape_asu_university.py:1993 - scrape_institution_website()] __main__: ccurrent program to scrape : Aging
+2022-09-09 10:47:10,675 - [INFO] [scrape_asu_university.py:2003 - calling_scrape_function()] __main__: calling child institution table
+2022-09-09 10:47:10,675 - [INFO] [scrape_asu_university.py:376 - insert_into_college_institution()] __main__: inserting child data into Inserting table 
+2022-09-09 10:47:10,676 - [INFO] [scrape_asu_university.py:385 - insert_into_college_institution()] __main__: institution id found in college_institution
+2022-09-09 10:47:10,678 - [INFO] [scrape_asu_university.py:393 - insert_into_college_institution()] __main__: Duplicate record found
+2022-09-09 10:47:10,678 - [INFO] [scrape_asu_university.py:2006 - calling_scrape_function()] __main__: Inserting data into area table
+2022-09-09 10:47:10,679 - [INFO] [scrape_asu_university.py:2008 - calling_scrape_function()] __main__: calling area table
+2022-09-09 10:47:10,679 - [INFO] [scrape_asu_university.py:409 - insert_into_area()] __main__: inserting into Area table
+2022-09-09 10:47:10,681 - [INFO] [scrape_asu_university.py:67 - table_exists()] __main__: Table "area" exists: True %s
+2022-09-09 10:47:10,681 - [DEBUG] [scrape_asu_university.py:416 - insert_into_area()] __main__: current area title: Aging
+2022-09-09 10:47:10,682 - [INFO] [scrape_asu_university.py:422 - insert_into_area()] __main__: Duplicate record found
+2022-09-09 10:47:10,683 - [INFO] [scrape_asu_university.py:2011 - calling_scrape_function()] __main__: calling degree table
+2022-09-09 10:47:10,683 - [INFO] [scrape_asu_university.py:444 - insert_into_degree()] __main__: inserting into Degree table
+2022-09-09 10:47:10,684 - [INFO] [scrape_asu_university.py:67 - table_exists()] __main__: Table "degree" exists: True %s
+2022-09-09 10:47:10,686 - [INFO] [scrape_asu_university.py:456 - insert_into_degree()] __main__: Duplicate record found
+2022-09-09 10:47:10,687 - [INFO] [scrape_asu_university.py:2014 - calling_scrape_function()] __main__: calling degree_level table
+2022-09-09 10:47:10,687 - [INFO] [scrape_asu_university.py:471 - insert_into_degree_level()] __main__: inserting into Degree_level table
+2022-09-09 10:47:10,688 - [INFO] [scrape_asu_university.py:67 - table_exists()] __main__: Table "degree_level" exists: True %s
+2022-09-09 10:47:10,692 - [INFO] [scrape_asu_university.py:492 - insert_into_degree_level()] __main__: duplicate key found in degree_level
+2022-09-09 10:47:10,692 - [INFO] [scrape_asu_university.py:2017 - calling_scrape_function()] __main__: calling location table
+2022-09-09 10:47:10,692 - [INFO] [scrape_asu_university.py:512 - insert_into_location()] __main__: inserting into Location table
+2022-09-09 10:47:10,694 - [INFO] [scrape_asu_university.py:67 - table_exists()] __main__: Table "location" exists: True %s
+2022-09-09 10:47:10,695 - [INFO] [scrape_asu_university.py:525 - insert_into_location()] __main__: Duplicate record found
+2022-09-09 10:47:10,696 - [INFO] [scrape_asu_university.py:525 - insert_into_location()] __main__: Duplicate record found
+2022-09-09 10:47:10,696 - [INFO] [scrape_asu_university.py:2028 - scrape_course_summary()] __main__: scraping course_summary()
+2022-09-09 10:47:16,228 - [INFO] [scrape_asu_university.py:1052 - insert_into_inst_location()] __main__: Inserting into institution-location table
+2022-09-09 10:47:16,231 - [INFO] [scrape_asu_university.py:67 - table_exists()] __main__: Table "institution_location" exists: True %s
+2022-09-09 10:47:16,234 - [DEBUG] [scrape_asu_university.py:1068 - insert_into_inst_location()] __main__: duplicate data found in institution-location(): (mariadb.IntegrityError) Duplicate entry '1-1001' for key 'PRIMARY'
+[SQL: INSERT INTO institution_location (inst_id, location_id) VALUES (?, ?)]
+[parameters: (1, 1001)]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+2022-09-09 10:47:16,257 - [INFO] [scrape_asu_university.py:548 - insert_into_program()] __main__: inserting into program table
+2022-09-09 10:47:16,259 - [INFO] [scrape_asu_university.py:67 - table_exists()] __main__: Table "program" exists: True %s
+2022-09-09 10:47:16,273 - [INFO] [scrape_asu_university.py:620 - insert_into_program()] __main__: Duplicate record found
+2022-09-09 10:47:16,273 - [INFO] [scrape_asu_university.py:1079 - insert_into_program_area()] __main__: inserting into program_area table
+2022-09-09 10:47:16,275 - [INFO] [scrape_asu_university.py:67 - table_exists()] __main__: Table "program_area" exists: True %s
+2022-09-09 10:47:16,280 - [DEBUG] [scrape_asu_university.py:1101 - insert_into_program_area()] __main__: Duplicate data found in program_area  (mariadb.IntegrityError) Duplicate entry '4-4' for key 'PRIMARY'
+[SQL: INSERT INTO program_area (program_id, area_id) VALUES (?, ?)]
+[parameters: (4, 4)]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+2022-09-09 10:47:16,280 - [INFO] [scrape_asu_university.py:641 - insert_into_program_college()] __main__: Inserting into program-college table
+2022-09-09 10:47:16,282 - [INFO] [scrape_asu_university.py:67 - table_exists()] __main__: Table "program_college" exists: True %s
+2022-09-09 10:47:16,285 - [DEBUG] [scrape_asu_university.py:664 - insert_into_program_college()] __main__: duplicate data found in program-college(): (mariadb.IntegrityError) Duplicate entry '4-1006' for key 'PRIMARY'
+[SQL: INSERT INTO program_college (program_id, college_id) VALUES (?, ?)]
+[parameters: (4, 1006)]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+2022-09-09 10:47:16,285 - [INFO] [scrape_asu_university.py:1108 - insert_into_program_location()] __main__: inserting into program_location
+2022-09-09 10:47:16,287 - [INFO] [scrape_asu_university.py:67 - table_exists()] __main__: Table "program_location" exists: True %s
+2022-09-09 10:47:16,290 - [DEBUG] [scrape_asu_university.py:1126 - insert_into_program_location()] __main__: duplicate data found in program_location: (mariadb.IntegrityError) Duplicate entry '4-1001' for key 'PRIMARY'
+[SQL: INSERT INTO program_location (program_id, location_id) VALUES (?, ?)]
+[parameters: (4, 1001)]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+2022-09-09 10:47:16,290 - [INFO] [scrape_asu_university.py:676 - send_graduate_to_req_table()] __main__: inserting graduate degree each requirements..!
+2022-09-09 10:47:16,299 - [INFO] [scrape_asu_university.py:698 - send_graduate_to_req_table()] __main__: Duplicate record found
+2022-09-09 10:47:16,299 - [INFO] [scrape_asu_university.py:1201 - insert_into_term()] __main__: inserting into term table
+2022-09-09 10:47:16,301 - [INFO] [scrape_asu_university.py:67 - table_exists()] __main__: Table "term" exists: True %s
+2022-09-09 10:47:16,303 - [DEBUG] [scrape_asu_university.py:1213 - insert_into_term()] __main__: Error: No id found: No row was found when one was required
+2022-09-09 10:47:16,304 - [DEBUG] [scrape_asu_university.py:1269 - insert_into_term()] __main__: Error in insert_into_term(), name 'requirement_group_id' is not defined
+2022-09-09 10:47:16,304 - [DEBUG] [scrape_asu_university.py:717 - send_graduate_to_req_table()] __main__: error raised while inserting-into-term as:  name 'requirement_group_id' is not defined
+2022-09-09 10:47:16,305 - [INFO] [scrape_asu_university.py:1276 - insert_into_rqmt_group_college()] __main__: inserting into Rqmt_group_college()
+2022-09-09 10:47:16,307 - [INFO] [scrape_asu_university.py:67 - table_exists()] __main__: Table "rqmt_group_college" exists: True %s
+2022-09-09 10:47:16,310 - [DEBUG] [scrape_asu_university.py:1291 - insert_into_rqmt_group_college()] __main__: Error for Rqmt_group_college(): (mariadb.IntegrityError) Duplicate entry '6003-1006' for key 'PRIMARY'
+[SQL: INSERT INTO rqmt_group_college (rqmt_group_id, college_id) VALUES (?, ?)]
+[parameters: (6003, 1006)]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+2022-09-09 10:47:16,310 - [INFO] [scrape_asu_university.py:1296 - insert_into_rqmt_group_location()] __main__: inserting into Rqmt_group_location() table
+2022-09-09 10:47:16,312 - [INFO] [scrape_asu_university.py:67 - table_exists()] __main__: Table "rqmt_group_location" exists: True %s
+2022-09-09 10:47:16,316 - [DEBUG] [scrape_asu_university.py:1318 - insert_into_rqmt_group_location()] __main__: Error for Rqmt_group_location(): (mariadb.IntegrityError) Duplicate entry '6003-2' for key 'PRIMARY'
+[SQL: INSERT INTO rqmt_group_location (rqmt_group_id, location_id) VALUES (?, ?)]
+[parameters: (6003, 2)]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+2022-09-09 10:47:16,317 - [INFO] [scrape_asu_university.py:747 - send_graduate_to_req_table()] __main__: Duplicate record found
+2022-09-09 10:47:16,322 - [DEBUG] [scrape_asu_university.py:787 - send_graduate_to_req_table()] __main__: Error raised as Requirement_group_Requirement_category-table as: (mariadb.IntegrityError) Duplicate entry '6003-1' for key 'rqmt_group_rqmt_category_rqmt_group_id_rqmt_category_id'
+[SQL: INSERT INTO rqmt_group_rqmt_category (id, rqmt_group_id, rqmt_category_id, credit_type, min_credits, max_credits) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: (2030, 6003, 1, 'Hours', None, 18.0)]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+2022-09-09 10:47:16,324 - [INFO] [scrape_asu_university.py:747 - send_graduate_to_req_table()] __main__: Duplicate record found
+2022-09-09 10:47:16,328 - [DEBUG] [scrape_asu_university.py:787 - send_graduate_to_req_table()] __main__: Error raised as Requirement_group_Requirement_category-table as: (mariadb.IntegrityError) Duplicate entry '6003-11' for key 'rqmt_group_rqmt_category_rqmt_group_id_rqmt_category_id'
+[SQL: INSERT INTO rqmt_group_rqmt_category (id, rqmt_group_id, rqmt_category_id, credit_type, min_credits, max_credits) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: (2031, 6003, 11, 'Hours', None, 6.0)]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+2022-09-09 10:47:16,330 - [INFO] [scrape_asu_university.py:747 - send_graduate_to_req_table()] __main__: Duplicate record found
+2022-09-09 10:47:16,334 - [DEBUG] [scrape_asu_university.py:787 - send_graduate_to_req_table()] __main__: Error raised as Requirement_group_Requirement_category-table as: (mariadb.IntegrityError) Duplicate entry '6003-12' for key 'rqmt_group_rqmt_category_rqmt_group_id_rqmt_category_id'
+[SQL: INSERT INTO rqmt_group_rqmt_category (id, rqmt_group_id, rqmt_category_id, credit_type, min_credits, max_credits) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: (2032, 6003, 12, 'Hours', None, 6.0)]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+2022-09-09 10:47:16,336 - [INFO] [scrape_asu_university.py:747 - send_graduate_to_req_table()] __main__: Duplicate record found
+2022-09-09 10:47:16,340 - [DEBUG] [scrape_asu_university.py:787 - send_graduate_to_req_table()] __main__: Error raised as Requirement_group_Requirement_category-table as: (mariadb.IntegrityError) Duplicate entry '6003-13' for key 'rqmt_group_rqmt_category_rqmt_group_id_rqmt_category_id'
+[SQL: INSERT INTO rqmt_group_rqmt_category (id, rqmt_group_id, rqmt_category_id, credit_type, min_credits, max_credits) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: (2033, 6003, 13, 'Hours', None, 3.0)]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+2022-09-09 10:47:16,342 - [INFO] [scrape_asu_university.py:747 - send_graduate_to_req_table()] __main__: Duplicate record found
+2022-09-09 10:47:16,346 - [DEBUG] [scrape_asu_university.py:787 - send_graduate_to_req_table()] __main__: Error raised as Requirement_group_Requirement_category-table as: (mariadb.IntegrityError) Duplicate entry '6003-5' for key 'rqmt_group_rqmt_category_rqmt_group_id_rqmt_category_id'
+[SQL: INSERT INTO rqmt_group_rqmt_category (id, rqmt_group_id, rqmt_category_id, credit_type, min_credits, max_credits) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: (2034, 6003, 5, 'Hours', None, 3.0)]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+2022-09-09 10:47:16,348 - [INFO] [scrape_asu_university.py:747 - send_graduate_to_req_table()] __main__: Duplicate record found
+2022-09-09 10:47:16,356 - [DEBUG] [scrape_asu_university.py:787 - send_graduate_to_req_table()] __main__: Error raised as Requirement_group_Requirement_category-table as: (mariadb.IntegrityError) Duplicate entry '6003-6' for key 'rqmt_group_rqmt_category_rqmt_group_id_rqmt_category_id'
+[SQL: INSERT INTO rqmt_group_rqmt_category (id, rqmt_group_id, rqmt_category_id, credit_type, min_credits, max_credits) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: (2035, 6003, 6, None, None, None)]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+2022-09-09 10:47:16,358 - [INFO] [scrape_asu_university.py:987 - send_graduate_to_req_table()] __main__: Duplicate record found
+2022-09-09 10:47:16,362 - [INFO] [scrape_asu_university.py:830 - send_graduate_to_req_table()] __main__: Duplicate record found
+2022-09-09 10:47:16,364 - [DEBUG] [scrape_asu_university.py:862 - send_graduate_to_req_table()] __main__: error raised as while insert into- graduate-req-term table: name 'requirement_group_id' is not defined
+2022-09-09 10:47:43,656 - [DEBUG] [scrape_asu_university.py:2439 - scrape_course_curriculum_page()] __main__: current requirement: HCA 501 Perspectives on Aging and the Life Course (3)
+2022-09-09 10:47:43,656 - [DEBUG] [scrape_asu_university.py:2440 - scrape_course_curriculum_page()] __main__: scraping url: https://webapp4.asu.edu/catalog/courselist?s=HCA&n=501&t=2227&hon=F&gg=F
+2022-09-09 10:47:43,656 - [DEBUG] [scrape_asu_university.py:2490 - scrape_course_curriculum_page()] __main__: no general studies found for HCA 501 Perspectives on Aging and the Life Course (3)
+2022-09-09 10:47:43,656 - [INFO] [scrape_asu_university.py:2491 - scrape_course_curriculum_page()] __main__: calling insert_into_course() 
+2022-09-09 10:47:43,656 - [DEBUG] [scrape_asu_university.py:2493 - scrape_course_curriculum_page()] __main__: course code: HCA 501 
+2022-09-09 10:47:43,658 - [INFO] [scrape_asu_university.py:2496 - scrape_course_curriculum_page()] __main__: duplicate record found in course table
+2022-09-09 10:47:43,660 - [INFO] [scrape_asu_university.py:1924 - post_data_into_rqmt_variable()] __main__: inserting data-into post_data_into_rqmt_variable()
+2022-09-09 10:47:43,661 - [INFO] [scrape_asu_university.py:1929 - post_data_into_rqmt_variable()] __main__: Duplicate record found
+2022-09-09 10:47:43,664 - [INFO] [scrape_asu_university.py:830 - send_graduate_to_req_table()] __main__: Duplicate record found
+2022-09-09 10:47:43,666 - [DEBUG] [scrape_asu_university.py:862 - send_graduate_to_req_table()] __main__: error raised as while insert into- graduate-req-term table: name 'requirement_group_id' is not defined
+2022-09-09 10:48:10,515 - [DEBUG] [scrape_asu_university.py:2439 - scrape_course_curriculum_page()] __main__: current requirement: HCA 502 Research and Program Evaluation Issues in Aging (3)
+2022-09-09 10:48:10,515 - [DEBUG] [scrape_asu_university.py:2440 - scrape_course_curriculum_page()] __main__: scraping url: https://webapp4.asu.edu/catalog/courselist?s=HCA&n=502&t=2227&hon=F&gg=F
+2022-09-09 10:48:10,515 - [DEBUG] [scrape_asu_university.py:2490 - scrape_course_curriculum_page()] __main__: no general studies found for HCA 502 Research and Program Evaluation Issues in Aging (3)
+2022-09-09 10:48:10,516 - [INFO] [scrape_asu_university.py:2491 - scrape_course_curriculum_page()] __main__: calling insert_into_course() 
+2022-09-09 10:48:10,516 - [DEBUG] [scrape_asu_university.py:2493 - scrape_course_curriculum_page()] __main__: course code: HCA 502 
+2022-09-09 10:48:10,518 - [INFO] [scrape_asu_university.py:2496 - scrape_course_curriculum_page()] __main__: duplicate record found in course table
+2022-09-09 10:48:10,520 - [INFO] [scrape_asu_university.py:1924 - post_data_into_rqmt_variable()] __main__: inserting data-into post_data_into_rqmt_variable()
+2022-09-09 10:48:10,521 - [INFO] [scrape_asu_university.py:1929 - post_data_into_rqmt_variable()] __main__: Duplicate record found
+2022-09-09 10:48:10,525 - [INFO] [scrape_asu_university.py:830 - send_graduate_to_req_table()] __main__: Duplicate record found
+2022-09-09 10:48:10,527 - [DEBUG] [scrape_asu_university.py:862 - send_graduate_to_req_table()] __main__: error raised as while insert into- graduate-req-term table: name 'requirement_group_id' is not defined
+2022-09-09 10:48:37,455 - [DEBUG] [scrape_asu_university.py:2439 - scrape_course_curriculum_page()] __main__: current requirement: HCA 503 Diversity in Aging (3)
+2022-09-09 10:48:37,456 - [DEBUG] [scrape_asu_university.py:2440 - scrape_course_curriculum_page()] __main__: scraping url: https://webapp4.asu.edu/catalog/courselist?s=HCA&n=503&t=2227&hon=F&gg=F
+2022-09-09 10:48:37,456 - [DEBUG] [scrape_asu_university.py:2490 - scrape_course_curriculum_page()] __main__: no general studies found for HCA 503 Diversity in Aging (3)
+2022-09-09 10:48:37,456 - [INFO] [scrape_asu_university.py:2491 - scrape_course_curriculum_page()] __main__: calling insert_into_course() 
+2022-09-09 10:48:37,456 - [DEBUG] [scrape_asu_university.py:2493 - scrape_course_curriculum_page()] __main__: course code: HCA 503 
+2022-09-09 10:48:37,458 - [INFO] [scrape_asu_university.py:2496 - scrape_course_curriculum_page()] __main__: duplicate record found in course table
+2022-09-09 10:48:37,460 - [INFO] [scrape_asu_university.py:1924 - post_data_into_rqmt_variable()] __main__: inserting data-into post_data_into_rqmt_variable()
+2022-09-09 10:48:37,461 - [INFO] [scrape_asu_university.py:1929 - post_data_into_rqmt_variable()] __main__: Duplicate record found
+2022-09-09 10:48:37,465 - [INFO] [scrape_asu_university.py:830 - send_graduate_to_req_table()] __main__: Duplicate record found
+2022-09-09 10:48:37,467 - [DEBUG] [scrape_asu_university.py:862 - send_graduate_to_req_table()] __main__: error raised as while insert into- graduate-req-term table: name 'requirement_group_id' is not defined
+2022-09-09 10:49:04,321 - [DEBUG] [scrape_asu_university.py:2439 - scrape_course_curriculum_page()] __main__: current requirement: HCA 504 Caregiving Issues for Families and Professionals (3)
+2022-09-09 10:49:04,322 - [DEBUG] [scrape_asu_university.py:2440 - scrape_course_curriculum_page()] __main__: scraping url: https://webapp4.asu.edu/catalog/courselist?s=HCA&n=504&t=2227&hon=F&gg=F
+2022-09-09 10:49:04,322 - [DEBUG] [scrape_asu_university.py:2490 - scrape_course_curriculum_page()] __main__: no general studies found for HCA 504 Caregiving Issues for Families and Professionals (3)
+2022-09-09 10:49:04,322 - [INFO] [scrape_asu_university.py:2491 - scrape_course_curriculum_page()] __main__: calling insert_into_course() 
+2022-09-09 10:49:04,322 - [DEBUG] [scrape_asu_university.py:2493 - scrape_course_curriculum_page()] __main__: course code: HCA 504 
+2022-09-09 10:49:04,324 - [INFO] [scrape_asu_university.py:2496 - scrape_course_curriculum_page()] __main__: duplicate record found in course table
+2022-09-09 10:49:04,327 - [INFO] [scrape_asu_university.py:1924 - post_data_into_rqmt_variable()] __main__: inserting data-into post_data_into_rqmt_variable()
+2022-09-09 10:49:04,328 - [INFO] [scrape_asu_university.py:1929 - post_data_into_rqmt_variable()] __main__: Duplicate record found
+2022-09-09 10:49:04,332 - [INFO] [scrape_asu_university.py:830 - send_graduate_to_req_table()] __main__: Duplicate record found
+2022-09-09 10:49:04,336 - [DEBUG] [scrape_asu_university.py:862 - send_graduate_to_req_table()] __main__: error raised as while insert into- graduate-req-term table: name 'requirement_group_id' is not defined
+2022-09-09 10:49:31,082 - [DEBUG] [scrape_asu_university.py:2439 - scrape_course_curriculum_page()] __main__: current requirement: HCA 505 Interdisciplinary and Community Collaboration in Aging (3)
+2022-09-09 10:49:31,082 - [DEBUG] [scrape_asu_university.py:2440 - scrape_course_curriculum_page()] __main__: scraping url: https://webapp4.asu.edu/catalog/courselist?s=HCA&n=505&t=2227&hon=F&gg=F
+2022-09-09 10:49:31,082 - [DEBUG] [scrape_asu_university.py:2490 - scrape_course_curriculum_page()] __main__: no general studies found for HCA 505 Interdisciplinary and Community Collaboration in Aging (3)
+2022-09-09 10:49:31,082 - [INFO] [scrape_asu_university.py:2491 - scrape_course_curriculum_page()] __main__: calling insert_into_course() 
+2022-09-09 10:49:31,082 - [DEBUG] [scrape_asu_university.py:2493 - scrape_course_curriculum_page()] __main__: course code: HCA 505 
+2022-09-09 10:49:31,084 - [INFO] [scrape_asu_university.py:2496 - scrape_course_curriculum_page()] __main__: duplicate record found in course table
+2022-09-09 10:49:31,087 - [INFO] [scrape_asu_university.py:1924 - post_data_into_rqmt_variable()] __main__: inserting data-into post_data_into_rqmt_variable()
+2022-09-09 10:49:31,088 - [INFO] [scrape_asu_university.py:1929 - post_data_into_rqmt_variable()] __main__: Duplicate record found
+2022-09-09 10:49:31,091 - [INFO] [scrape_asu_university.py:830 - send_graduate_to_req_table()] __main__: Duplicate record found
+2022-09-09 10:49:31,093 - [DEBUG] [scrape_asu_university.py:862 - send_graduate_to_req_table()] __main__: error raised as while insert into- graduate-req-term table: name 'requirement_group_id' is not defined
+2022-09-09 10:49:58,109 - [DEBUG] [scrape_asu_university.py:2439 - scrape_course_curriculum_page()] __main__: current requirement: HCA 508 Mental Health Assessment and Intervention (3)
+2022-09-09 10:49:58,109 - [DEBUG] [scrape_asu_university.py:2440 - scrape_course_curriculum_page()] __main__: scraping url: https://webapp4.asu.edu/catalog/courselist?s=HCA&n=508&t=2227&hon=F&gg=F
+2022-09-09 10:49:58,109 - [DEBUG] [scrape_asu_university.py:2490 - scrape_course_curriculum_page()] __main__: no general studies found for HCA 508 Mental Health Assessment and Intervention (3)
+2022-09-09 10:49:58,109 - [INFO] [scrape_asu_university.py:2491 - scrape_course_curriculum_page()] __main__: calling insert_into_course() 
+2022-09-09 10:49:58,109 - [DEBUG] [scrape_asu_university.py:2493 - scrape_course_curriculum_page()] __main__: course code: HCA 508 
+2022-09-09 10:49:58,111 - [INFO] [scrape_asu_university.py:2496 - scrape_course_curriculum_page()] __main__: duplicate record found in course table
+2022-09-09 10:49:58,114 - [INFO] [scrape_asu_university.py:1924 - post_data_into_rqmt_variable()] __main__: inserting data-into post_data_into_rqmt_variable()
+2022-09-09 10:49:58,117 - [INFO] [scrape_asu_university.py:1929 - post_data_into_rqmt_variable()] __main__: Duplicate record found
+2022-09-09 10:49:58,121 - [INFO] [scrape_asu_university.py:928 - send_graduate_to_req_table()] __main__: Duplicate record found
+2022-09-09 10:49:58,125 - [DEBUG] [scrape_asu_university.py:958 - send_graduate_to_req_table()] __main__: error raised at line-921 for grad-req-term table : (mariadb.IntegrityError) Duplicate entry '38-1' for key 'PRIMARY'
+[SQL: INSERT INTO rqmt_term (requirement_id, term_id) VALUES (?, ?)]
+[parameters: (38, 1)]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+2022-09-09 10:49:58,126 - [INFO] [scrape_asu_university.py:1924 - post_data_into_rqmt_variable()] __main__: inserting data-into post_data_into_rqmt_variable()
+2022-09-09 10:49:58,128 - [INFO] [scrape_asu_university.py:1929 - post_data_into_rqmt_variable()] __main__: Duplicate record found
+2022-09-09 10:49:58,131 - [INFO] [scrape_asu_university.py:928 - send_graduate_to_req_table()] __main__: Duplicate record found
+2022-09-09 10:49:58,136 - [DEBUG] [scrape_asu_university.py:958 - send_graduate_to_req_table()] __main__: error raised at line-921 for grad-req-term table : (mariadb.IntegrityError) Duplicate entry '39-1' for key 'PRIMARY'
+[SQL: INSERT INTO rqmt_term (requirement_id, term_id) VALUES (?, ?)]
+[parameters: (39, 1)]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+2022-09-09 10:49:58,137 - [INFO] [scrape_asu_university.py:1924 - post_data_into_rqmt_variable()] __main__: inserting data-into post_data_into_rqmt_variable()
+2022-09-09 10:49:58,139 - [INFO] [scrape_asu_university.py:1929 - post_data_into_rqmt_variable()] __main__: Duplicate record found
+2022-09-09 10:49:58,142 - [INFO] [scrape_asu_university.py:830 - send_graduate_to_req_table()] __main__: Duplicate record found
+2022-09-09 10:49:58,144 - [DEBUG] [scrape_asu_university.py:862 - send_graduate_to_req_table()] __main__: error raised as while insert into- graduate-req-term table: name 'requirement_group_id' is not defined
+2022-09-09 10:50:24,990 - [DEBUG] [scrape_asu_university.py:2439 - scrape_course_curriculum_page()] __main__: current requirement: HCA 509 Interventions to Support Aging in Place (3) or
+2022-09-09 10:50:24,990 - [DEBUG] [scrape_asu_university.py:2440 - scrape_course_curriculum_page()] __main__: scraping url: https://webapp4.asu.edu/catalog/courselist?s=HCA&n=509&t=2227&hon=F&gg=F
+2022-09-09 10:50:24,990 - [DEBUG] [scrape_asu_university.py:2490 - scrape_course_curriculum_page()] __main__: no general studies found for HCA 509 Interventions to Support Aging in Place (3) or
+2022-09-09 10:50:24,990 - [INFO] [scrape_asu_university.py:2491 - scrape_course_curriculum_page()] __main__: calling insert_into_course() 
+2022-09-09 10:50:24,990 - [DEBUG] [scrape_asu_university.py:2493 - scrape_course_curriculum_page()] __main__: course code: HCA 509 
+2022-09-09 10:50:24,992 - [INFO] [scrape_asu_university.py:2496 - scrape_course_curriculum_page()] __main__: duplicate record found in course table
+2022-09-09 10:50:24,994 - [INFO] [scrape_asu_university.py:1924 - post_data_into_rqmt_variable()] __main__: inserting data-into post_data_into_rqmt_variable()
+2022-09-09 10:50:24,995 - [INFO] [scrape_asu_university.py:1929 - post_data_into_rqmt_variable()] __main__: Duplicate record found
+2022-09-09 10:50:24,998 - [INFO] [scrape_asu_university.py:830 - send_graduate_to_req_table()] __main__: Duplicate record found
+2022-09-09 10:50:25,006 - [DEBUG] [scrape_asu_university.py:862 - send_graduate_to_req_table()] __main__: error raised as while insert into- graduate-req-term table: name 'requirement_group_id' is not defined
+2022-09-09 10:50:51,761 - [DEBUG] [scrape_asu_university.py:2439 - scrape_course_curriculum_page()] __main__: current requirement: HCA 510 Innovations in Program Development and Policy (3)
+2022-09-09 10:50:51,761 - [DEBUG] [scrape_asu_university.py:2440 - scrape_course_curriculum_page()] __main__: scraping url: https://webapp4.asu.edu/catalog/courselist?s=HCA&n=510&t=2227&hon=F&gg=F
+2022-09-09 10:50:51,762 - [DEBUG] [scrape_asu_university.py:2490 - scrape_course_curriculum_page()] __main__: no general studies found for HCA 510 Innovations in Program Development and Policy (3)
+2022-09-09 10:50:51,762 - [INFO] [scrape_asu_university.py:2491 - scrape_course_curriculum_page()] __main__: calling insert_into_course() 
+2022-09-09 10:50:51,762 - [DEBUG] [scrape_asu_university.py:2493 - scrape_course_curriculum_page()] __main__: course code: HCA 510 
+2022-09-09 10:50:51,764 - [INFO] [scrape_asu_university.py:2496 - scrape_course_curriculum_page()] __main__: duplicate record found in course table
+2022-09-09 10:50:51,766 - [INFO] [scrape_asu_university.py:1924 - post_data_into_rqmt_variable()] __main__: inserting data-into post_data_into_rqmt_variable()
+2022-09-09 10:50:51,767 - [INFO] [scrape_asu_university.py:1929 - post_data_into_rqmt_variable()] __main__: Duplicate record found
+2022-09-09 10:50:51,770 - [INFO] [scrape_asu_university.py:830 - send_graduate_to_req_table()] __main__: Duplicate record found
+2022-09-09 10:50:51,772 - [DEBUG] [scrape_asu_university.py:862 - send_graduate_to_req_table()] __main__: error raised as while insert into- graduate-req-term table: name 'requirement_group_id' is not defined
+2022-09-09 10:51:18,730 - [DEBUG] [scrape_asu_university.py:2439 - scrape_course_curriculum_page()] __main__: current requirement: HCA 593 Applied Project (3)
+2022-09-09 10:51:18,730 - [DEBUG] [scrape_asu_university.py:2440 - scrape_course_curriculum_page()] __main__: scraping url: https://webapp4.asu.edu/catalog/courselist?s=HCA&n=593&t=2227&hon=F&gg=F
+2022-09-09 10:51:18,730 - [DEBUG] [scrape_asu_university.py:2490 - scrape_course_curriculum_page()] __main__: no general studies found for HCA 593 Applied Project (3)
+2022-09-09 10:51:18,730 - [INFO] [scrape_asu_university.py:2491 - scrape_course_curriculum_page()] __main__: calling insert_into_course() 
+2022-09-09 10:51:18,730 - [DEBUG] [scrape_asu_university.py:2493 - scrape_course_curriculum_page()] __main__: course code: HCA 593 
+2022-09-09 10:51:18,732 - [INFO] [scrape_asu_university.py:2496 - scrape_course_curriculum_page()] __main__: duplicate record found in course table
+2022-09-09 10:51:18,735 - [INFO] [scrape_asu_university.py:1924 - post_data_into_rqmt_variable()] __main__: inserting data-into post_data_into_rqmt_variable()
+2022-09-09 10:51:18,736 - [INFO] [scrape_asu_university.py:1929 - post_data_into_rqmt_variable()] __main__: Duplicate record found
+2022-09-09 10:51:18,739 - [INFO] [scrape_asu_university.py:830 - send_graduate_to_req_table()] __main__: Duplicate record found
+2022-09-09 10:51:18,741 - [DEBUG] [scrape_asu_university.py:862 - send_graduate_to_req_table()] __main__: error raised as while insert into- graduate-req-term table: name 'requirement_group_id' is not defined
+2022-09-09 10:51:18,742 - [INFO] [scrape_asu_university.py:987 - send_graduate_to_req_table()] __main__: Duplicate record found
+2022-09-09 10:51:18,744 - [INFO] [scrape_asu_university.py:987 - send_graduate_to_req_table()] __main__: Duplicate record found
+2022-09-09 10:51:18,746 - [INFO] [scrape_asu_university.py:67 - table_exists()] __main__: Table "admission_req" exists: True %s
+2022-09-09 10:51:18,755 - [INFO] [scrape_asu_university.py:1030 - get_graduate_admission_req()] __main__: Duplicate record found
+2022-09-09 10:51:18,755 - [INFO] [scrape_asu_university.py:2053 - scrape_get_major_map_link()] __main__: collect & scrape major_map_link
+2022-09-09 10:51:18,759 - [DEBUG] [scrape_asu_university.py:1993 - scrape_institution_website()] __main__: ccurrent program to scrape : American Indian Studies (Indigenous Rights and Social Justice)
+2022-09-09 10:51:18,759 - [INFO] [scrape_asu_university.py:2003 - calling_scrape_function()] __main__: calling child institution table
+2022-09-09 10:51:18,760 - [INFO] [scrape_asu_university.py:376 - insert_into_college_institution()] __main__: inserting child data into Inserting table 
+2022-09-09 10:51:18,761 - [INFO] [scrape_asu_university.py:385 - insert_into_college_institution()] __main__: institution id found in college_institution
+2022-09-09 10:51:18,762 - [INFO] [scrape_asu_university.py:393 - insert_into_college_institution()] __main__: Duplicate record found
+2022-09-09 10:51:18,763 - [INFO] [scrape_asu_university.py:2006 - calling_scrape_function()] __main__: Inserting data into area table
+2022-09-09 10:51:18,763 - [INFO] [scrape_asu_university.py:2008 - calling_scrape_function()] __main__: calling area table
+2022-09-09 10:51:18,763 - [INFO] [scrape_asu_university.py:409 - insert_into_area()] __main__: inserting into Area table
+2022-09-09 10:51:18,765 - [INFO] [scrape_asu_university.py:67 - table_exists()] __main__: Table "area" exists: True %s
+2022-09-09 10:51:18,765 - [DEBUG] [scrape_asu_university.py:416 - insert_into_area()] __main__: current area title: American Indian Studies (Indigenous Rights and Social Justice)
+2022-09-09 10:51:18,766 - [INFO] [scrape_asu_university.py:422 - insert_into_area()] __main__: Duplicate record found
+2022-09-09 10:51:18,767 - [INFO] [scrape_asu_university.py:2011 - calling_scrape_function()] __main__: calling degree table
+2022-09-09 10:51:18,767 - [INFO] [scrape_asu_university.py:444 - insert_into_degree()] __main__: inserting into Degree table
+2022-09-09 10:51:18,769 - [INFO] [scrape_asu_university.py:67 - table_exists()] __main__: Table "degree" exists: True %s
+2022-09-09 10:51:18,770 - [INFO] [scrape_asu_university.py:456 - insert_into_degree()] __main__: Duplicate record found
+2022-09-09 10:51:18,771 - [INFO] [scrape_asu_university.py:2014 - calling_scrape_function()] __main__: calling degree_level table
+2022-09-09 10:51:18,771 - [INFO] [scrape_asu_university.py:471 - insert_into_degree_level()] __main__: inserting into Degree_level table
+2022-09-09 10:51:18,772 - [INFO] [scrape_asu_university.py:67 - table_exists()] __main__: Table "degree_level" exists: True %s
+2022-09-09 10:51:18,776 - [INFO] [scrape_asu_university.py:492 - insert_into_degree_level()] __main__: duplicate key found in degree_level
+2022-09-09 10:51:18,776 - [INFO] [scrape_asu_university.py:2017 - calling_scrape_function()] __main__: calling location table
+2022-09-09 10:51:18,776 - [INFO] [scrape_asu_university.py:512 - insert_into_location()] __main__: inserting into Location table
+2022-09-09 10:51:18,778 - [INFO] [scrape_asu_university.py:67 - table_exists()] __main__: Table "location" exists: True %s
+2022-09-09 10:51:18,779 - [INFO] [scrape_asu_university.py:525 - insert_into_location()] __main__: Duplicate record found
+2022-09-09 10:51:18,779 - [INFO] [scrape_asu_university.py:2028 - scrape_course_summary()] __main__: scraping course_summary()
